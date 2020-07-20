@@ -1,0 +1,9 @@
+server:
+  port: 8001
+eureka:
+  instance:
+    hostname: http://localhost:8080
+    appname: transactions-app
+  client:
+       service-url: ${eureka.instance.hostname}/eureka/
+       enabled: true
