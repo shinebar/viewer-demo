@@ -1,9 +1,13 @@
+spring:
+  application:
+    name: transactions-app
 server:
   port: 8001
 eureka:
   instance:
-    hostname: http://localhost:8080
     appname: transactions-app
+#    hostname: http://localhost:8080
   client:
-       service-url: ${eureka.instance.hostname}/eureka/
-       enabled: true
+    enabled: true
+    service-url:
+      defaultZone: http://localhost:8080/eureka/
