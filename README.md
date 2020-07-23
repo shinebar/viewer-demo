@@ -1,2 +1,4 @@
 # viewer-demo
-spring cloud 
+spring cloud 2.2.6.RELEASE, 
+mybatis ,
+eurake，
