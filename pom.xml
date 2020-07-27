@@ -11,73 +11,17 @@
     <modules>
         <module>eureka-server-app</module>
         <module>transactions-app</module>
-        <module>common-dependences</module>
         <module>view-service-api</module>
         <module>viewer-dao</module>
         <module>viewer-service</module>
         <module>common-api</module>
     </modules>
     <properties>
-        <commons.version>2.4.0</commons.version>
-        <project.version>c.2.4-SNAPSHOT</project.version>
-        <seata.version>1.2.0</seata.version>
-        <lombok.version>1.18.12</lombok.version>
-        <slf4j-api.version>1.7.30</slf4j-api.version>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <spring.boot.start.version>2.2.6.RELEASE</spring.boot.start.version>
-        <docker.image.prefix>viewerDemo</docker.image.prefix>
-        <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
-        <maven-resources-plugin.version>3.1.0</maven-resources-plugin.version>
-        <maven-javadoc-plugin.version>3.0.0</maven-javadoc-plugin.version>
-        <dockerfile-maven-plugin.version>1.4.12</dockerfile-maven-plugin.version>
-        <spring-boot-maven-plugin.version>2.2.7.RELEASE</spring-boot-maven-plugin.version>
     </properties>
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>io.seata</groupId>
-                <artifactId>seata-spring-boot-starter</artifactId>
-                <version>${seata.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-parent</artifactId>
-                <version>${spring.boot.start.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.example</groupId>
-                <artifactId>common-dependences</artifactId>
-                <version>1.0.0</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-       </dependencies>
-    </dependencyManagement>
-    <dependencies>
-        <!--Lombok-->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
-        </dependency>
-    </dependencies>
+
     <profiles>
         <!-- 开发环境 -->
         <profile>
