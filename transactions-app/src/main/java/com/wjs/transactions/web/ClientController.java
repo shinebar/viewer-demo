@@ -1,4 +1,4 @@
-package com.wjs.web;
+package com.wjs.transactions.web;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

@@ -1,6 +1,15 @@
+---
 spring:
+  profiles: test
   application:
     name: transactions-app
+#  cloud:
+#    config:
+#      server:
+#        git:
+#          basedir: target/config
+#          uri: https://github.com/shinebar/config-repo
+
 server:
   port: 8001
 eureka:

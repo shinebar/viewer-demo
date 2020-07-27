@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.wjs.dao.TransactionDao">
+    <select id="findById" resultType="int" parameterType="com.wjs.entity.TransactionEntity">
+      SELECT * FROM T_TBL_TRANSACTIONS
+      <where>id = #{id}</where>
+    </select>
+    <select id="findAll" resultType="com.wjs.entity.TransactionEntity">
+		SELECT id,name,age FROM T_TBL_TRANSACTIONS
+	</select>
+    <update id="update" parameterType="com.wjs.entity.TransactionEntity">
+     update T_TBL_TRANSACTIONS
+        <trim prefix="set" suffixOverrides=",">
+            <if test="name!=null">name=#{name},</if>
+            <if test="age!=null">age=#{age},</if>
+        </trim>
+        WHERE id=#{id}
+    </update>
+    <delete id="delete" parameterType="com.wjs.entity.TransactionEntity">
+		delete from T_TBL_TRANSACTIONS where id=#{id};
+	</delete>
+    <insert id="save" parameterType="com.wjs.entity.TransactionEntity">
+		INSERT INTO T_TBL_TRANSACTIONS(id,name,age)
+		VALUES (#{id},#{name},#{age}) ;
+	</insert>
+</mapper>
