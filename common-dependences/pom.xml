@@ -6,6 +6,7 @@
     <artifactId>common-dependences</artifactId>
     <groupId>org.example</groupId>
     <packaging>pom</packaging>
+    <version>1.0.0</version>
     <name>${project.artifactId}</name>
     <description>Spring Boot 2.x项目依赖管理</description>
     <properties>
