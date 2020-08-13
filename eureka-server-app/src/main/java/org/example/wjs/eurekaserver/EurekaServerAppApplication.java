@@ -1,4 +1,4 @@
-package com.wjs.eurekaserver;
+package org.example.wjs.eurekaserver;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

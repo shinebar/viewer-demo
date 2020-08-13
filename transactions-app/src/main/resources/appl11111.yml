@@ -1,0 +1,32 @@
+server:
+  port: 8002
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/demo?useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: root
+  application:
+    name: transactions-app
+eureka:
+  instance:
+    appname: transactions-app
+  #    hostname: http://localhost:8080
+  client:
+    enabled: true
+    service-url:
+      defaultZone: http://localhost:8080/eureka/
+
+#  cloud:
+#    config:
+#      server:
+#        git:
+#          basedir: target/config
+#          uri: https://github.com/shinebar/config-repo
+mybatis:
+  config-location: classpath:mybatis.cfg.xml
+  type-aliases-package: com.wjs.entity
+  mapper-locations: classpath*:mybatis/mapper/*.xml
+

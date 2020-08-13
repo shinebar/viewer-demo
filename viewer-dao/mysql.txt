@@ -1,0 +1,14 @@
+#创建数据库 demo
+CREATE DATABASE IF NOT EXISTS demo DEFAULT CHARSET utf8 COLLATE utf8_general_ci;
+#创建表 T_TBL_TRANSACTIONS
+create table T_TBL_TRANSACTIONS(
+            TransactionID   int(10) primary key auto_increment COMMENT 'primary key ID',
+            TradeID         int(10) not null COMMENT 'tradeId',
+            Version         int(10) DEFAULT 1 COMMENT 'version no',
+            SecurityCode    varchar(10) DEFAULT null COMMENT 'SecurityCode',
+            Quantity        int(10) DEFAULT 0 COMMENT 'Quantity',
+            OPERATE         varchar(10) DEFAULT null COMMENT 'OPERATE',
+            BUYORSELL       varchar(10) DEFAULT null COMMENT 'BUYORSELL',
+            CREATE_TIME  timestamp DEFAULT NOW() COMMENT 'create time',
+            UPDATE_TIME datetime   DEFAULT null COMMENT 'update time'
+            )ENGINE=InnoDB DEFAULT CHARSET=utf8;
